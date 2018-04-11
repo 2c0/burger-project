@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 const burgerIngredient = (props) = {
     let ingredient = null;
@@ -16,24 +17,24 @@ const burgerIngredient = (props) = {
                 </div> 
              );
             break;
-            case ('meat'):
-                ingredient = (
-                    <div className={classes.Meat}></div>
+        case ('meat'):
+            ingredient = (
+                <div className={classes.Meat}></div>
             );
             break;
-            case ('cheese'):
-                ingredient = (
-                    <div className={classes.Cheese}></div>
+        case ('cheese'):
+            ingredient = (
+                <div className={classes.Cheese}></div>
             );
             break;
-            case ('salad'):
-                ingredient = (
-                    <div className={classes.Salad}></div>
+        case ('salad'):
+            ingredient = (
+                <div className={classes.Salad}></div>
             );
             break;
-            case ('bacon'):
-                ingredient = (
-                    <div className={classes.Bacon}></div>
+        case ('bacon'):
+            ingredient = (
+                <div className={classes.Bacon}></div>
             );
             break;
             default:
