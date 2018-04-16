@@ -27,7 +27,8 @@ class BurgerBuilder extends Component {
             meat: 0
         },
         totalPrice: 4,
-        purchasable: false
+        purchasable: false,
+        purchasing: false
     }
 
     updatePurchaseState(ingredients) {
@@ -71,6 +72,10 @@ class BurgerBuilder extends Component {
         const newPrice = oldPrice - priceDeduction;
         this.setState({ totalPrice: newPrice, ingredients: updatedIngredients });
         this.updatePurchaseState(updatedIngredients);
+    }
+
+    purchaseHandler () {
+        this.setState({purchasing: true});
     }
 
     render() {
